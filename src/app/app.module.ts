@@ -6,11 +6,18 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import {TouchEventComponent} from "../components/touch-event/touch-event";
+import {Assignment2Page} from "../pages/assignment2/assignment2";
+import {ResetComponent} from "../components/reset/reset";
+import { CounterProvider } from '../providers/counter/counter';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    TouchEventComponent,
+    Assignment2Page,
+    ResetComponent
   ],
   imports: [
     BrowserModule,
@@ -19,12 +26,14 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    Assignment2Page
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CounterProvider
   ]
 })
 export class AppModule {}

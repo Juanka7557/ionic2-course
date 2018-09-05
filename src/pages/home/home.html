@@ -7,8 +7,47 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <touch-event></touch-event>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3> A Column</ion-col>
+      <ion-col> Second Column</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset-4> Second Colunm</ion-col>
+    </ion-row>
+  </ion-grid>
+  <button ion-button color="secondary" (click)="onClick()"> A normal Button</button>
+  <button (click)="onClick()"
+          ion-button
+          block
+          icon-left>
+          <ion-icon name="home"></ion-icon>
+          Home</button>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="star" item-right></ion-icon>
+      <h5>The heading of the item</h5>
+      <p>A normal item</p>
+    </ion-item>
+    <button ion-item > A button item</button>
+  </ion-list>
+  <ion-item-group>
+    <ion-item-divider>A</ion-item-divider>
+    <ion-item>Apples</ion-item>
+    <ion-item>Avocados</ion-item>
+    <ion-item-divider>B</ion-item-divider>
+    <ion-item>Bananas</ion-item>
+    <ion-item>Berries</ion-item>
+  </ion-item-group>
+  <ion-list>
+    <ion-list-header>Privacy</ion-list-header>
+    <ion-item>Tracking</ion-item>
+    <ion-item>Personal Images</ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Sharing</ion-list-header>
+    <ion-item>Tracking</ion-item>
+    <ion-item>Personal Images</ion-item>
+  </ion-list>
 </ion-content>
